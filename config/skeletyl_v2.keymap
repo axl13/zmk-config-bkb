@@ -73,103 +73,33 @@
     keymap {
       compatible = "zmk,keymap";
 
-      default_layer {
-      label = "Aptmak";
+      layer0 {
+      label = "Layer0";
       bindings = <
-      &kp        V &kp        W &kp        F &kp        P &kp        B                   &kp        J &kp        L &kp        U &kp        Y &kp     APOS
-      &kp        R &kp        S &kp        T &kp        H &kp        K                   &kp        X &kp        N &kp        A &kp        I &kp        O
-      &key_repeat  &kp        C &kp        G &kp        D &kp        Q                   &kp        Z &kp        M &kp    COMMA &kp   PERIOD &key_repeat
-                                             &mo      NAV &kp    SPACE &mo NAV &mo SYMBOLS &kp      E &mo  SYMBOLS
+   
+      &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &mt LEFT_SHIFT A &mt LEFT_CONTROL S &mt LEFT_ALT D &mt LEFT_GUI F &kp G &kp H RGUI_T(KC_J) RALT_T(KC_K) RCTL_T(KC_L) RSFT_T(KC_SCLN) &lt 1 Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &lt 2 SLASH &kp BACKSPACE &kp SPACE &lt 1 ESCAPE &lt 2 TAB &kp ENTER &kp SPACE
+
+>;
+      };
+
+      layer1 {
+      label = "Layer1";
+      bindings = < 
+KC_EXLM KC_AT KC_HASH KC_DLR KC_PERC &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 KC_TILD &kp F20 &kp LEFT &kp RIGHT &kp F20 &kp F20 &kp UP &kp DOWN KC_DQUO &kp SINGLE_QUOTE &kp GRAVE &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 KC_LCBR KC_RCBR &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSPACE &kp SPACE &trans &mo 3 &kp ENTER &kp SPACE
         >;
       };
 
-      akl_layer {
-      label = "APTHD";
+      layer2 {
+      label = "Layer2";
       bindings = <
-      &kp        W &kp        F &kp        Y &kp        P &kp        B                   &kp        Q &kp        L &kp        O &kp        U &kp     APOS
-      &kp        R &kp        S &kp        T &kp        H &kp        K                   &kp        J &kp        N &kp        E &kp        I &kp        A
-      &kp        X &kp        C &kp        G &kp        D &kp        V                   &kp        Z &kp        M &key_repeat  &kp    COMMA &kp   PERIOD
-                                             &mo      NAV &kp    SPACE &mo NAV &mo SYMBOLS &sk  LSHFT &mo  SYMBOLS
-        >;
+    &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 KC_CIRC KC_AMPR KC_ASTR KC_LPRN KC_RPRN &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp MINUS &kp EQUAL &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 KC_UNDS KC_PLUS KC_LCBR KC_RCBR KC_PIPE &kp LEFT_GUI &kp SPACE &mo 3 &trans &kp ENTER &kp RIGHT_ALT        >;
       };
 
-      game_layer {
-      label = "Game";
+      layer3 {
+      label = "Layer3";
       bindings = <
-      &kp        T &kp        Q &kp        W &kp        E &kp        R                   &kp        Y &kp        U &kp        I &kp        O &kp        P
-      &kp    LSHFT &kp        A &kp        S &kp        D &kp        F                   &kp        H &kp        J &kp        A &kp        I &kp     APOS
-      &kp    LCTRL &kp        Z &kp        X &kp        C &kp        V                   &kp        N &kp        M &kp    COMMA &kp   PERIOD &key_repeat
-                                             &mo      NAV &kp    SPACE &mo NAV &mo SYMBOLS &kp  LSHFT &mo  SYMBOLS
-        >;
-      };
+          QK_BOOT &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 EE_CLR RGB_HUI RGB_SAI RGB_VAI &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 RGB_HUD RGB_SAD RGB_VAD &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp LEFT_GUI &kp SPACE &trans &trans &kp ENTER &kp RIGHT_ALT
 
-      apt_layer {
-      label = "APT326";
-      bindings = <
-      &kp        W &kp        C &kp        D &kp        F &kp        B                   &kp        J &kp        L &kp        U &kp        O &kp        Y
-      &kp        R &kp        S &kp        T &kp        H &kp        K                   &kp        X &kp        N &kp        E &kp        A &kp        I
-      &key_repeat  &kp        V &kp        G &kp        P &kp        Q                   &kp        Z &kp        M &kp    COMMA &kp   PERIOD &key_repeat
-                                             &mo      NAV &kp    SPACE &mo NAV &mo SYMBOLS &sk  LSHFT &mo  SYMBOLS
-        >;
-      };
-
-      nav_layer {
-      label = "Navigation";
-      bindings = <
-      &kp    S_PRV &kp  C_S_TAB &kp      TAB &kp CTRL_TAB &kp    S_NXT                   &kp    PG_UP &kp     HOME &kp       UP &kp      END &kp      DEL
-      &sk     LGUI &sk     LALT &sk    LCTRL &sk    LSHFT &kp SCRNSHOT                   &kp    PG_DN &kp     LEFT &kp     DOWN &kp    RIGHT &kp    ENTER
-      &kp    LC(Z) &kp    LC(X) &kp    LC(C) &kp    LC(V) &kp    LC(A)                   &none        &kp     BSPC &trans       &trans       &trans
-                                             &trans       &mo  SPECIAL &trans    &trans  &trans       &trans
-        >;
-      };
-
-      symbols_layer {
-      label = "Symbols";
-      bindings = <
-      &kp   ESCAPE &kp  PERCENT &kp    QMARK &kp    COLON &kp       AT                   &kp    CARET &kp     SEMI &kp     LPAR &kp     RPAR &kp    TILDE
-      &kp     EXCL &kp     PLUS &kp    MINUS &kp    EQUAL &kp     HASH                   &kp    UNDER &sk   LSHIFT &sk    LCTRL &sk     LALT &sk     LGUI
-      &kp    TILDE &kp   DOLLAR &kp ASTERISK &kp    SLASH &kp     AMPS                   &kp     PIPE &kp     BSLH &kp     LBRC &kp     RBRC &kp    GRAVE
-                                             &trans       &trans       &trans    &trans  &mo  SPECIAL &trans
-        >;
-      };
-
-      numbers_layer {
-      label = "Numbers";
-      bindings = <
-      &kp    SLASH &kp       N7 &kp       N8 &kp       N9 &kp ASTERISK                   &none        &kp    EQUAL &kp       LT &kp GT       &none
-      &kp    MINUS &kp       N4 &kp       N5 &kp       N6 &kp     PLUS                   &none        &sk   LSHIFT &sk    LCTRL &sk    LALT  &sk     LGUI
-      &kp      DOT &kp       N1 &kp       N2 &kp       N3 &kp    COMMA                   &none        &kp       N0 &kp     LBKT &kp     RBKT &none
-                                             &trans       &trans       &trans    &trans  &trans       &trans
-        >;
-      };
-
-      numpad_layer {
-      label = "NumPad";
-      bindings = <
-      &none        &kp       N7 &kp       N8 &kp       N9 &none                          &kp KP_ASTERISK &kp    KP_N7 &kp    KP_N8 &kp    KP_N9 &kp KP_MINUS
-      &mt LGUI MINUS &mt  LALT N4 &mt  LCTL N5 &mt LSHFT N6 &kp   PLUS                   &kp    KP_SLASH &kp    KP_N4 &kp    KP_N5 &kp    KP_N6 &kp  KP_PLUS
-      &kp      DOT &kp       N1 &kp       N2 &kp       N3 &kp       N0                   &kp       KP_N0 &kp    KP_N1 &kp    KP_N2 &kp    KP_N3 &kp   KP_DOT
-                                             &trans       &trans       &trans    &kp KP_ENTER  &kp KP_N0 &kp   KP_DOT
-        >;
-      };
-
-      fun_layer {
-      label = "F-keys";
-      bindings = <
-      &kp      F12 &kp       F7 &kp       F8 &kp       F9 &kp     CAPS                   &kp KP_NUM   &kp      INS &kp    PSCRN &kp     SLCK &kp PAUSE_BREAK
-      &kp      F11 &kp       F4 &kp       F5 &kp       F6 &kp    K_APP                   &none        &sk    LSHFT &sk     LCTL &sk     LALT &sk     LGUI
-      &kp      F10 &kp       F1 &kp       F2 &kp       F3 &none                          &none        &none        &none        &none        &none
-                                             &trans       &trans       &trans    &trans  &trans       &trans
-        >;
-      };
-
-      special_layer {
-      label = "Settings";
-      bindings = <
-      &bootloader  &sys_reset   &none        &to   APT326 &to     BASE                   &out OUT_USB &out OUT_BLE &none        &sys_reset   &bootloader
-      &none        &kp   C_MUTE &kp C_VOL_DN &kp C_VOL_UP &to    APTHD                   &bt   BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
-      &none        &kp     C_PP &kp C_BRI_DN &kp C_BRI_UP &to     GAME                   &none        &none        &none        &none        &none
-                                             &trans       &trans       &trans    &trans  &trans       &trans
         >;
       };
 
