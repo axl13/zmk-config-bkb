@@ -1,80 +1,35 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/outputs.h>
+  /*
+  * Copyright (c) 2020 The ZMK Contributors
+  *
+  * SPDX-License-Identifier: MIT
+  */
 
+  #include <behaviors.dtsi>
+  #include <dt-bindings/zmk/keys.h>
+  #include <dt-bindings/zmk/bt.h>
+  #include <dt-bindings/zmk/ext_power.h>
 
-#define LAUNCHER (LG(TAB))
-#define CTRL_TAB (LC(TAB))
-#define C_S_TAB (LC(LS(TAB)))
-#define SCRNSHOT (LG(LS(S)))
-
-#define SPC_PREVIOUS (LC(LG(LEFT)))
-#define S_PRV SPC_PREVIOUS
-
-#define SPC_NEXT (LC(LG(RIGHT)))
-#define S_NXT SPC_NEXT
-
-&caps_word {
-    continue-list = <UNDERSCORE MINUS BACKSPACE>;
-};
-
-&sk {
-  quick-release;
-};
-
-/ {
-    #include "36key_combos.dtsi"
-
-    chosen {
-      zmk,battery = &vbatt;
-    };
-
-    vbatt: vbatt {
-      compatible = "zmk,battery-nrf-vddh";
-      label = "VBATT";
-    };
-
-
+  / {
     keymap {
       compatible = "zmk,keymap";
-
-      layer0 {
-      label = "Layer0";
-      bindings = <  
-      &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &mt LEFT_SHIFT A &mt LEFT_CONTROL S &mt LEFT_ALT D &mt LEFT_GUI F &kp G &kp H RGUI_T(KC_J) RALT_T(KC_K) RCTL_T(KC_L) RSFT_T(KC_SCLN) &lt 1 Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &lt 2 SLASH &kp BACKSPACE &kp SPACE &lt 1 ESCAPE &lt 2 TAB &kp ENTER &kp SPACE
->;
-      };
-
-      layer1 {
-      label = "Layer1";
-      bindings = < 
-KC_EXLM KC_AT KC_HASH KC_DLR KC_PERC &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 KC_TILD &kp F20 &kp LEFT &kp RIGHT &kp F20 &kp F20 &kp UP &kp DOWN KC_DQUO &kp SINGLE_QUOTE &kp GRAVE &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 KC_LCBR KC_RCBR &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSPACE &kp SPACE &trans &mo 3 &kp ENTER &kp SPACE
-        >;
-      };
-
-      layer2 {
-      label = "Layer2";
-      bindings = <
-    &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 KC_CIRC KC_AMPR KC_ASTR KC_LPRN KC_RPRN &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp MINUS &kp EQUAL &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 KC_UNDS KC_PLUS KC_LCBR KC_RCBR KC_PIPE &kp LEFT_GUI &kp SPACE &mo 3 &trans &kp ENTER &kp RIGHT_ALT        >;
- >;
-};
-
-      layer3 {
-      label = "Layer3";
-      bindings = <
+  layer0 {
+          bindings = <
+          &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &mt LEFT_SHIFT A &mt LEFT_CONTROL S &mt LEFT_ALT D &mt LEFT_GUI F &kp G &kp H RGUI_T(KC_J) RALT_T(KC_K) RCTL_T(KC_L) RSFT_T(KC_SCLN) &lt 1 Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &lt 2 SLASH &kp BACKSPACE &kp SPACE &lt 1 ESCAPE &lt 2 TAB &kp ENTER &kp SPACE
+          >;
+        };layer1 {
+          bindings = <
+          KC_EXLM KC_AT KC_HASH KC_DLR KC_PERC &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 KC_TILD &kp F20 &kp LEFT &kp RIGHT &kp F20 &kp F20 &kp UP &kp DOWN KC_DQUO &kp SINGLE_QUOTE &kp GRAVE &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 KC_LCBR KC_RCBR &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSPACE &kp SPACE &trans &mo 3 &kp ENTER &kp SPACE
+          >;
+        };layer2 {
+          bindings = <
+          &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 KC_CIRC KC_AMPR KC_ASTR KC_LPRN KC_RPRN &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp MINUS &kp EQUAL &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 KC_UNDS KC_PLUS KC_LCBR KC_RCBR KC_PIPE &kp LEFT_GUI &kp SPACE &mo 3 &trans &kp ENTER &kp RIGHT_ALT
+          >;
+        };layer3 {
+          bindings = <
           QK_BOOT &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 EE_CLR RGB_HUI RGB_SAI RGB_VAI &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 RGB_HUD RGB_SAD RGB_VAD &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp LEFT_GUI &kp SPACE &trans &trans &kp ENTER &kp RIGHT_ALT
-
-        >;
-      };
-
+          >;
+        };
     };
-
-};
+  };
+  
