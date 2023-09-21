@@ -29,10 +29,10 @@
 
         layer0 {
             bindings = <
-&kp Q              &kp W  &kp E          &kp R         &kp T           &kp Y      &kp U      &kp I      &kp O       &kp P
-&bhm LEFT_SHIFT A  &bhm LCTRL S  &bhm LGUI D &bhm LALT F         &kp G           &kp H      &bhm RALT J      &bhm RGUI K      &bhm RCTRL L       &bhm RIGHT_SHIFT SEMICOLON
-&bhm LEFT_SHIFT Z  &kp X  &kp C          &kp V         &kp B           &kp N      &kp M      &kp COMMA  &kp PERIOD  &bhm RIGHT_SHIFT SLASH
-                          &kp BACKSPACE  &kp LEFT_GUI  &lt 1 ESCAPE    &lt 2 TAB  &kp ENTER  &kp SPACE
+&kp Q              &kp W         &kp E          &kp R         &kp T           &kp Y      &kp U        &kp I        &kp O         &kp P
+&bhm LEFT_SHIFT A  &bhm LCTRL S  &bhm LGUI D    &bhm LALT F   &kp G           &kp H      &bhm RALT J  &bhm RGUI K  &bhm RCTRL L  &bhm RIGHT_SHIFT SEMICOLON
+&lt 3 Z            &lt 4 X       &kp C          &kp V         &kp B           &kp N      &kp M        &kp COMMA    &lt 4 PERIOD  &lt 3 SLASH
+                                 &kp BACKSPACE  &kp LEFT_GUI  &lt 1 ESCAPE    &lt 2 TAB  &kp ENTER    &kp SPACE
             >;
         };
 
@@ -51,6 +51,24 @@
 &kp ESCAPE                 &kp EQUAL  &kp F20     &kp F20           &ext_power EP_TOG    &kp PLUS   &kp MINUS      &kp EQUAL      &kp DOUBLE_QUOTES     &kp SINGLE_QUOTE
 &bhm LEFT_SHIFT BACKSLASH  &kp PIPE   &kp HOME    &kp END           &kp F20              &kp PLUS   &kp PAGE_UP    &kp PAGE_DOWN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
                                       &kp DELETE  &kp LEFT_CONTROL  &kp END              &trans     &kp ENTER      &kp RIGHT_ALT
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&kp EXCL  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp N1    &kp N2       &kp N3     &kp N4      &kp N5         &kp N6     &kp N7         &kp N8     &kp N9                &kp N0
+&trans    &trans       &trans     &trans      &trans         &trans     &trans         &trans     &trans                &trans
+                       &trans     &trans      &trans         &trans     &trans         &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
