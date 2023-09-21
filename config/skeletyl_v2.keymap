@@ -30,7 +30,7 @@
         layer0 {
             bindings = <
 &kp Q              &kp W  &kp E          &kp R         &kp T           &kp Y      &kp U      &kp I      &kp O       &kp P
-&kp A              &kp S  &kp D          &kp F         &kp G           &kp H      &kp J      &kp K      &kp L       &kp SEMICOLON
+&bhm LEFT_SHIFT A  &bhm LCTRL S  &bhm LGUI D &bhm LALT F         &kp G           &kp H      &bhm RALT J      &bhm RGUI K      &bhm RCTRL L       &bhm RIGHT_SHIFT SEMICOLON
 &bhm LEFT_SHIFT Z  &kp X  &kp C          &kp V         &kp B           &kp N      &kp M      &kp COMMA  &kp PERIOD  &bhm RIGHT_SHIFT SLASH
                           &kp BACKSPACE  &kp LEFT_GUI  &lt 1 ESCAPE    &lt 2 TAB  &kp ENTER  &kp SPACE
             >;
