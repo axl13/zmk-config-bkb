@@ -43,7 +43,7 @@
             label = "TD_MT0";
             #binding-cells = <0>;
             bindings =
-                <&bhm A LSHFT>,
+                <&bhm LSHFT A>,
                 <&kp ESCAPE>;
         };
         td1_mt: td1_mt {
@@ -51,7 +51,7 @@
             label = "TD1_MT";
             #binding-cells = <0>;
             bindings =
-                <&bhm SEMICOLON RSHIFT>,
+                <&bhm RSHIFT SEMICOLON>,
                 <&kp SQT>;
         };
     };
