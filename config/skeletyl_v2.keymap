@@ -18,41 +18,35 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "balanced";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
+
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD0";
             #binding-cells = <0>;
-            bindings =
-                <&kp P>,
-                <&kp MINUS>;
+            bindings = <&kp P>, <&kp MINUS>;
         };
+
         td1: td1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD1";
             #binding-cells = <0>;
-            bindings =
-                <&kp Q>,
-                <&kp TAB>;
+            bindings = <&kp Q>, <&kp TAB>;
         };
+
         td_mt0: td_mt0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_MT0";
             #binding-cells = <0>;
-            bindings =
-                <&bhm LSHFT A>,
-                <&kp ESCAPE>;
+            bindings = <&bhm LSHFT A>, <&kp ESCAPE>;
         };
+
         td1_mt: td1_mt {
             compatible = "zmk,behavior-tap-dance";
             label = "TD1_MT";
             #binding-cells = <0>;
-            bindings =
-                <&bhm RSHIFT SEMICOLON>,
-                <&kp SQT>;
+            bindings = <&bhm RSHIFT SEMICOLON>, <&kp SQT>;
         };
     };
 
@@ -79,7 +73,7 @@
 
         layer2 {
             bindings = <
-&kp TAB                    &kp PLUS   &kp BT_CLR  &bt BT_PRV        &bt BT_NXT           &kp CARET  &kp AMPERSAND  &kp ASTERISK   &kp UNDERSCORE        &kp MINUS
+&kp TAB                    &kp PLUS   &bt BT_CLR  &bt BT_PRV        &bt BT_NXT           &kp CARET  &kp AMPERSAND  &kp ASTERISK   &kp UNDERSCORE        &kp MINUS
 &kp ESCAPE                 &kp EQUAL  &kp F20     &kp F20           &ext_power EP_TOG    &kp PLUS   &kp MINUS      &kp EQUAL      &kp DOUBLE_QUOTES     &kp SINGLE_QUOTE
 &bhm LEFT_SHIFT BACKSLASH  &kp PIPE   &kp HOME    &kp END           &kp F20              &kp PLUS   &kp PAGE_UP    &kp PAGE_DOWN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
                                       &kp DELETE  &kp LEFT_CONTROL  &kp END              &trans     &kp ENTER      &kp RIGHT_ALT
