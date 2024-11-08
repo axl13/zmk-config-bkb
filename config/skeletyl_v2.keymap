@@ -69,10 +69,10 @@
 
         layer0 {
             bindings = <
-&td1_q_tab       &kp W         &kp E          &kp R         &kp T           &kp Y      &kp U        &kp I        &kp O         &td0_p_dash
-&td_shift_a_esc  &bhm LCTRL S  &bhm LGUI D    &bhm LALT F   &kp G           &kp H      &bhm RALT J  &bhm RGUI K  &bhm RCTRL L  &td1_shift_semi_quote
-&td_z_tilda      &kp X         &kp C          &lt 2 V       &kp B           &kp N      &lt 2 M      &kp COMMA    &kp PERIOD    &td_slash_dquote
-                               &kp BACKSPACE  &kp LEFT_GUI  &lt 1 ESCAPE    &lt 1 TAB  &kp ENTER    &kp SPACE
+&td1_q_tab         &kp W         &kp E          &kp R         &kp T           &kp Y      &kp U        &kp I        &kp O         &td0_p_dash
+&bhm LEFT_SHIFT A  &bhm LCTRL S  &bhm LGUI D    &bhm LALT F   &kp G           &kp H      &bhm RALT J  &bhm RGUI K  &bhm RCTRL L  &bhm RIGHT_SHIFT SEMICOLON
+&lt 2 Z            &kp X         &kp C          &lt 2 V       &kp B           &kp N      &lt 2 M      &kp COMMA    &kp PERIOD    &lt 2 SLASH
+                                 &kp BACKSPACE  &kp LEFT_GUI  &lt 1 ESCAPE    &lt 1 TAB  &kp ENTER    &kp SPACE
             >;
         };
 
@@ -87,10 +87,10 @@
 
         layer3 {
             bindings = <
-&kp LS(PLUS)               &kp LS(TILDE)  &bt BT_CLR  &bt BT_PRV        &bt BT_NXT           &kp CARET  &kp AMPERSAND  &kp PLUS       &kp UNDERSCORE     &kp MINUS
-&kp EQUAL                  &kp GRAVE      &kp F20     &kp F20           &ext_power EP_TOG    &kp PLUS   &kp MINUS      &kp EQUAL      &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE
-&bhm LEFT_SHIFT BACKSLASH  &kp PIPE       &kp HOME    &kp END           &kp F20              &kp PLUS   &kp PAGE_UP    &kp PAGE_DOWN  &kp LEFT_BRACE     &kp RIGHT_BRACE
-                                          &kp DELETE  &kp LEFT_CONTROL  &kp END              &trans     &kp ENTER      &kp RIGHT_ALT
+&kp PLUS   &kp LS(MINUS)  &bt BT_CLR  &bt BT_PRV        &bt BT_NXT           &kp CARET  &kp AMPERSAND  &kp PLUS       &kp UNDERSCORE     &kp LS(UNDER)
+&kp EQUAL  &kp GRAVE      &kp F20     &kp F20           &ext_power EP_TOG    &kp PLUS   &kp MINUS      &kp EQUAL      &kp DOUBLE_QUOTES  &kp LS(PIPE)
+&kp TILDE  &kp PIPE       &kp HOME    &kp END           &kp F20              &kp PLUS   &kp PAGE_UP    &kp LS(LBRC)   &kp LS(RBRC)       &kp LS(DQT)
+                          &kp DELETE  &kp LEFT_CONTROL  &kp END              &trans     &kp ENTER      &kp RIGHT_ALT
             >;
         };
     };
