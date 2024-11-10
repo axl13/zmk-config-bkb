@@ -89,7 +89,7 @@
             bindings = <
 &kp PLUS   &kp LS(MINUS)  &bt BT_CLR  &bt BT_PRV        &bt BT_NXT           &kp CARET  &kp AMPERSAND  &kp PLUS       &kp UNDERSCORE     &kp LS(UNDER)
 &kp EQUAL  &kp GRAVE      &kp F20     &kp F20           &ext_power EP_TOG    &kp PLUS   &kp MINUS      &kp EQUAL      &kp DOUBLE_QUOTES  &kp LS(PIPE)
-&kp TILDE  &kp PIPE       &kp HOME    &kp END           &kp F20              &kp PLUS   &kp PAGE_UP    &kp LS(LBRC)   &kp LS(RBRC)       &kp LS(DQT)
+&kp TILDE  &kp PIPE       &kp HOME    &kp END           &soft_off            &kp PLUS   &kp PAGE_UP    &kp LS(LBRC)   &kp LS(RBRC)       &kp LS(DQT)
                           &kp DELETE  &kp LEFT_CONTROL  &kp END              &trans     &kp ENTER      &kp RIGHT_ALT
             >;
         };
