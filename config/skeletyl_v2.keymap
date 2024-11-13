@@ -68,7 +68,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SLASH_DQUOTE";
             #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp DOUBLE_QUOTES>;
+            bindings = <&kp SLASH>, <&kp NON_US_BACKSLASH>;
+
+            tapping-term-ms = <100>;
         };
     };
 
@@ -95,9 +97,9 @@
 
         layer3 {
             bindings = <
-&kp PLUS   &kp LS(MINUS)  &bt BT_CLR  &bt BT_PRV        &bt BT_NXT           &kp CARET       &kp AMPERSAND  &kp PLUS       &kp LEFT_BRACE     &kp RIGHT_BRACE
-&kp EQUAL  &kp GRAVE      &kp F20     &kp F20           &ext_power EP_TOG    &kp PLUS        &kp MINUS      &kp EQUAL      &kp DOUBLE_QUOTES  &kp LS(PIPE)
-&kp TILDE  &kp PIPE       &kp HOME    &kp END           &soft_off            &kp UNDERSCORE  &kp PAGE_UP    &kp PAGE_DOWN  &kp LEFT_BRACKET   &kp RIGHT_BRACKET
+&kp PLUS   &kp LS(MINUS)  &bt BT_CLR  &bt BT_PRV        &bt BT_NXT           &kp CARET       &kp AMPERSAND  &kp DOUBLE_QUOTES  &kp LEFT_BRACE    &kp RIGHT_BRACE
+&kp EQUAL  &kp GRAVE      &kp F20     &kp F20           &ext_power EP_TOG    &kp PLUS        &kp MINUS      &kp EQUAL          &kp PIPE          &kp NON_US_BACKSLASH
+&kp TILDE  &kp PIPE       &kp HOME    &kp END           &soft_off            &kp UNDERSCORE  &kp PAGE_UP    &kp PAGE_DOWN      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
                           &kp DELETE  &kp LEFT_CONTROL  &kp END              &trans          &kp ENTER      &kp RIGHT_ALT
             >;
         };
