@@ -19,6 +19,7 @@ include:
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano//zmk
     shield: skeletyl_v2_right
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano//zmk
     shield: charybdis_4x6_v2_left
   - board: nice_nano//zmk

@@ -17,7 +17,7 @@ The base layer is [Aptmak](https://github.com/Apsu/aptmak), with V, Q, and Z, on
 The Skeletyl build enables ZMK Studio over USB on the left half. Connect the left
 Nice!Nano to the computer and open [zmk.studio](https://zmk.studio/) in Chrome or
 Edge. To unlock editing, hold the Function layer key and press the key at the
-left-hand F position (it sends F20 on the right half). Studio can change key
+left-hand F position. Studio can change key
 bindings and includes one reserved `Extra` layer for experimentation.
 
 The `P` key sends `P` on a single tap and apostrophe on a double tap within
