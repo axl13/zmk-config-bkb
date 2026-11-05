@@ -25,6 +25,14 @@
             bindings = <&kp>, <&kp>;
         };
 
+        td0_p_sqt: td0_p_sqt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD0_P_SQT";
+            #binding-cells = <0>;
+            tapping-term-ms = <120>;
+            bindings = <&kp P>, <&kp SQT>;
+        };
+
         td1_q_grave: td1_q_grave {
             compatible = "zmk,behavior-tap-dance";
             label = "TD1_Q_GRAVE";
@@ -69,7 +77,7 @@
         layer0 {
             display-name = "Base";
             bindings = <
-&td1_q_grave       &kp W         &kp E          &kp R         &kp T           &kp Y      &kp U        &kp I        &kp O         &kp P
+&td1_q_grave       &kp W         &kp E          &kp R         &kp T           &kp Y      &kp U        &kp I        &kp O         &td0_p_sqt
 &bhm LEFT_SHIFT A  &bhm LCTRL S  &bhm LGUI D    &bhm LALT F   &kp G           &kp H      &bhm RALT J  &bhm RGUI K  &bhm RCTRL L  &bhm RIGHT_SHIFT SEMICOLON
 &lt 2 Z            &kp X         &kp C          &lt 2 V       &kp B           &kp N      &lt 2 M      &kp COMMA    &kp PERIOD    &lt 2 SLASH
                                  &kp BACKSPACE  &kp LEFT_GUI  &lt 1 ESCAPE    &lt 1 TAB  &kp ENTER    &kp SPACE

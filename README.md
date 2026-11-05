@@ -20,7 +20,8 @@ Edge. To unlock editing, hold the Function layer key and press the key at the
 left-hand F position (it sends F20 on the right half). Studio can change key
 bindings and includes one reserved `Extra` layer for experimentation.
 
-The `P` key is a plain `P` press; it no longer sends apostrophe on a double tap.
+The `P` key sends `P` on a single tap and apostrophe on a double tap within
+120 ms. A very fast legitimate `pp` can still be interpreted as apostrophe.
 
 Studio saves runtime keymap changes in the keyboard's settings. Once you start
 using Studio, changes to the `.keymap` source will not replace those saved
