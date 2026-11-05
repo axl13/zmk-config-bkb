@@ -25,13 +25,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-        td0_p_sqt: td0_p_sqt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD0_P_SQT";
-            #binding-cells = <0>;
-            bindings = <&kp P>, <&kp SQT>;
-        };
-
         td1_q_grave: td1_q_grave {
             compatible = "zmk,behavior-tap-dance";
             label = "TD1_Q_GRAVE";
@@ -74,8 +67,9 @@
         compatible = "zmk,keymap";
 
         layer0 {
+            display-name = "Base";
             bindings = <
-&td1_q_grave       &kp W         &kp E          &kp R         &kp T           &kp Y      &kp U        &kp I        &kp O         &td0_p_sqt
+&td1_q_grave       &kp W         &kp E          &kp R         &kp T           &kp Y      &kp U        &kp I        &kp O         &kp P
 &bhm LEFT_SHIFT A  &bhm LCTRL S  &bhm LGUI D    &bhm LALT F   &kp G           &kp H      &bhm RALT J  &bhm RGUI K  &bhm RCTRL L  &bhm RIGHT_SHIFT SEMICOLON
 &lt 2 Z            &kp X         &kp C          &lt 2 V       &kp B           &kp N      &lt 2 M      &kp COMMA    &kp PERIOD    &lt 2 SLASH
                                  &kp BACKSPACE  &kp LEFT_GUI  &lt 1 ESCAPE    &lt 1 TAB  &kp ENTER    &kp SPACE
@@ -83,6 +77,7 @@
         };
 
         layer1 {
+            display-name = "Symbols";
             bindings = <
 &kp EXCLAMATION  &kp AT     &kp HASH    &kp DLLR          &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp N1           &kp N2     &kp N3      &kp N4            &kp N5       &kp N6     &kp N7     &kp N8     &kp N9                &kp N0
@@ -92,12 +87,24 @@
         };
 
         layer3 {
+            display-name = "Function";
             bindings = <
 &kp PLUS   &kp LS(MINUS)  &bt BT_CLR  &bt BT_PRV        &bt BT_NXT           &kp CARET       &kp AMPERSAND  &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE
-&kp EQUAL  &kp GRAVE      &kp F20     &kp F20           &ext_power EP_TOG    &kp PLUS        &kp MINUS      &kp EQUAL          &kp NON_US_BACKSLASH  &kp PIPE
+&kp EQUAL  &kp GRAVE      &kp F20
+#if CONFIG_ZMK_STUDIO
+             &studio_unlock
+#else
+             &kp F20
+#endif
+                                                    &ext_power EP_TOG    &kp PLUS        &kp MINUS      &kp EQUAL          &kp NON_US_BACKSLASH  &kp PIPE
 &kp TILDE  &kp PIPE       &kp HOME    &kp END           &soft_off            &kp UNDERSCORE  &kp PAGE_UP    &kp PAGE_DOWN      &kp LEFT_BRACKET      &kp RIGHT_BRACKET
                           &kp DELETE  &kp LEFT_CONTROL  &kp END              &trans          &kp ENTER      &kp RIGHT_ALT
             >;
+        };
+
+        studio_layer {
+            display-name = "Extra";
+            status = "reserved";
         };
     };
 };
