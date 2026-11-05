@@ -13,25 +13,25 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano_v2//zmk
     shield: skeletyl_v2_left
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: nice_nano_v2
+  - board: nice_nano_v2//zmk
     shield: skeletyl_v2_right
-  - board: nice_nano_v2
+  - board: nice_nano_v2//zmk
     shield: charybdis_4x6_v2_left
-  - board: nice_nano_v2
+  - board: nice_nano_v2//zmk
     shield: charybdis_4x6_v2_right
-  - board: nice_nano_v2
+  - board: nice_nano_v2//zmk
     shield: luna_left
-  - board: nice_nano_v2
+  - board: nice_nano_v2//zmk
     shield: luna_right
-  - board: nice_nano_v2
+  - board: nice_nano_v2//zmk
     shield: rollow_left
-  - board: nice_nano_v2
+  - board: nice_nano_v2//zmk
     shield: rollow_right
-  - board: nice_nano_v2
+  - board: nice_nano_v2//zmk
     shield: two_percent_milk
-  - board: nice_nano_v2
+  - board: nice_nano_v2//zmk
     shield: settings_reset
