@@ -29,7 +29,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD0_P_SQT";
             #binding-cells = <0>;
-            tapping-term-ms = <120>;
+            tapping-term-ms = <180>;
             bindings = <&kp P>, <&kp SQT>;
         };
 
@@ -38,6 +38,8 @@
             label = "TD1_Q_GRAVE";
             #binding-cells = <0>;
             bindings = <&kp Q>, <&kp GRAVE>;
+
+            tapping-term-ms = <180>;
         };
 
         td_shift_a_esc: td_shift_a_esc {
@@ -98,8 +100,7 @@
             display-name = "Function";
             bindings = <
 &kp PLUS   &kp LS(MINUS)  &bt BT_CLR  &bt BT_PRV        &bt BT_NXT           &kp CARET       &kp AMPERSAND  &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE
-&kp EQUAL  &kp GRAVE      &kp F20     &studio_unlock
-                                                    &ext_power EP_TOG    &kp PLUS        &kp MINUS      &kp EQUAL          &kp NON_US_BACKSLASH  &kp PIPE
+&kp EQUAL  &kp GRAVE      &kp F20     &studio_unlock    &ext_power EP_TOG    &kp PLUS        &kp MINUS      &kp EQUAL          &kp NON_US_BACKSLASH  &kp PIPE
 &kp TILDE  &kp PIPE       &kp HOME    &kp END           &soft_off            &kp UNDERSCORE  &kp PAGE_UP    &kp PAGE_DOWN      &kp LEFT_BRACKET      &kp RIGHT_BRACKET
                           &kp DELETE  &kp LEFT_CONTROL  &kp END              &trans          &kp ENTER      &kp RIGHT_ALT
             >;
