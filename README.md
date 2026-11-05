@@ -21,7 +21,7 @@ left-hand F position. Studio can change key
 bindings and includes one reserved `Extra` layer for experimentation.
 
 The `P` key sends `P` on a single tap and apostrophe on a double tap within
-120 ms. A very fast legitimate `pp` can still be interpreted as apostrophe.
+180 ms. A fast legitimate `pp` can still be interpreted as apostrophe.
 
 Studio saves runtime keymap changes in the keyboard's settings. Once you start
 using Studio, changes to the `.keymap` source will not replace those saved
