@@ -1,0 +1,75 @@
+draw_config:
+  footer_text: Skeletyl v3.2 · small label = hold · blue = combo
+  glyph_tap_size: 14
+  n_columns: 1
+parse_config:
+  raw_binding_map:
+    '&bt BT_CLR': BT clear
+    '&bt BT_NXT': BT next
+    '&bt BT_PRV': BT prev
+    '&ext_power EP_TOG': Ext pwr
+    '&soft_off': Soft off
+    '&studio_unlock': Studio unlock
+  zmk_keycode_map:
+    AMPS: '&'
+    ASTRK: '*'
+    AT: '@'
+    BACKSPACE: Bspc
+    BSLH: \
+    BT_CLR: BT clear
+    BT_NXT: BT next
+    BT_PRV: BT prev
+    CARET: ^
+    COLON: ':'
+    COMMA: ','
+    C_BRI_DN: Brt −
+    C_BRI_UP: Brt +
+    C_MUTE: Mute
+    C_PP: Play
+    C_VOL_DN: Vol −
+    C_VOL_UP: Vol +
+    DELETE: Del
+    DLLR: $
+    DOT: .
+    DOWN: ↓
+    DQT: '"'
+    END: End
+    ENTER: Enter
+    EP_TOG: Ext pwr
+    EQUAL: '='
+    ESCAPE: Esc
+    EXCL: '!'
+    GRAVE: '`'
+    HASH: '#'
+    HOME: Home
+    INS: Ins
+    LA(LS(N2)): €
+    LALT: Alt
+    LBKT: '['
+    LBRC: '{'
+    LCTRL: Ctrl
+    LEFT: ←
+    LEFT_GUI: Cmd
+    LEFT_SHIFT: Shift
+    LGUI: Cmd
+    LPAR: (
+    MINUS: '-'
+    PERIOD: .
+    PG_DN: PgDn
+    PG_UP: PgUp
+    PRCNT: '%'
+    RALT: Alt
+    RBKT: ']'
+    RBRC: '}'
+    RCTRL: Ctrl
+    RGUI: Cmd
+    RIGHT: →
+    RIGHT_SHIFT: Shift
+    RPAR: )
+    SEMICOLON: ;
+    SLASH: /
+    SPACE: Space
+    SQT: ''''
+    TAB: Tab
+    UNDER: _
+    UP: ↑

@@ -12,17 +12,50 @@ The base layer is [Aptmak](https://github.com/Apsu/aptmak), with V, Q, and Z, on
 ### [30 key (23332+2)](./assets/split30_keymap.yaml)
 ![30 key layout (generated with Caksoylar's keymap-drawer)](./assets/split30_keymap.svg)
 
-## Skeletyl Studio
+## Skeletyl (v3.2, Kinesis Advantage aligned)
+
+![Skeletyl keymap](./assets/skeletyl_v2_keymap.svg)
+
+Design rules: thumbs carry whitespace and layers (no layer-taps on letters),
+every unshifted symbol stays on the same finger as on a Kinesis Advantage,
+shifted numbers sit directly above their digits, and brackets/quotes are
+mirrored two-finger combos.
+
+| Thumb (outer → inner) | Left | Right (inner → outer) |
+|---|---|---|
+| tap | Bspc · Cmd · Esc | Tab · Enter · Space |
+| hold | – · – · Symbols | Symbols · Function · – |
+
+Combos (same row, adjacent fingers, Base layer only, 40 ms):
+
+| Left hand | Right hand |
+|---|---|
+| `S+D` → `{` | `J+K` → `"` · `K+L` → `}` · `L+;` → `'` |
+| `Z+X` → `\` · `X+C` → `[` · `C+V` → `(` | `M+,` → `)` · `,+.` → `]` |
+
+`{` and `}` have a 150 ms prior-idle guard because `sd`/`kl` occur in words.
+`S+D`, `J+K`, `K+L` double as Ctrl+Cmd / Alt+Cmd chords under the home-row
+mods: for Cmd+Opt shortcuts use the thumb Cmd with F or J instead.
+
+`€` is Function + D and assumes the macOS US layout (Option+Shift+2).
+
+Regenerate the diagram with [keymap-drawer](https://github.com/caksoylar/keymap-drawer):
+
+```sh
+keymap -c assets/keymap_drawer_config.yaml parse -z config/skeletyl_v2.keymap -o assets/skeletyl_v2_keymap.yaml
+# set layout: {qmk_keyboard: bastardkb/skeletyl, layout_name: LAYOUT_split_3x5_3}
+keymap -c assets/keymap_drawer_config.yaml draw assets/skeletyl_v2_keymap.yaml -o assets/skeletyl_v2_keymap.svg
+```
+
+### ZMK Studio
 
 The Skeletyl build enables ZMK Studio over USB on the left half. Connect the left
 Nice!Nano to the computer and open [zmk.studio](https://zmk.studio/) in Chrome or
-Edge. To unlock editing, hold the Function layer key and press the key at the
-left-hand F position. Studio can change key
-bindings and includes one reserved `Extra` layer for experimentation.
-
-The `P` key sends `P` on a single tap and apostrophe on a double tap within
-180 ms. A fast legitimate `pp` can still be interpreted as apostrophe.
+Edge. To unlock editing, hold Enter (Function layer) and press the key at the
+left-hand F position. Studio can change key bindings and includes one reserved
+`Extra` layer for experimentation.
 
 Studio saves runtime keymap changes in the keyboard's settings. Once you start
 using Studio, changes to the `.keymap` source will not replace those saved
-bindings unless you choose **Restore Stock Settings** in Studio.
+bindings unless you choose **Restore Stock Settings** in Studio (or flash the
+`settings_reset` firmware).

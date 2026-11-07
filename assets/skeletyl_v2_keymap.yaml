@@ -1,0 +1,141 @@
+layout: {qmk_keyboard: bastardkb/skeletyl, layout_name: LAYOUT_split_3x5_3}
+layers:
+  Base:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: Shift}
+  - {t: S, h: Ctrl}
+  - {t: D, h: Cmd}
+  - {t: F, h: Alt}
+  - G
+  - H
+  - {t: J, h: Alt}
+  - {t: K, h: Cmd}
+  - {t: L, h: Ctrl}
+  - {t: ;, h: Shift}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - Bspc
+  - Cmd
+  - {t: Esc, h: Symbols}
+  - {t: Tab, h: Symbols}
+  - {t: Enter, h: Function}
+  - Space
+  Symbols:
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '`'
+  - '='
+  - ←
+  - →
+  - ':'
+  - .
+  - ↑
+  - ↓
+  - _
+  - '-'
+  - Del
+  - Ctrl
+  - {type: held}
+  - {t: ▽, type: trans}
+  - Enter
+  - Space
+  Function:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - €
+  - Studio unlock
+  - BT next
+  - Mute
+  - Vol −
+  - Vol +
+  - Play
+  - BT prev
+  - Ext pwr
+  - Soft off
+  - Home
+  - End
+  - BT clear
+  - Ins
+  - PgUp
+  - PgDn
+  - Brt −
+  - Brt +
+  - Del
+  - Ctrl
+  - End
+  - {t: ▽, type: trans}
+  - {type: held}
+  - Space
+combos:
+- p: [11, 12]
+  k: '{'
+  l: [Base]
+- p: [16, 17]
+  k: '"'
+  l: [Base]
+- p: [17, 18]
+  k: '}'
+  l: [Base]
+- p: [18, 19]
+  k: ''''
+  l: [Base]
+- p: [20, 21]
+  k: \
+  l: [Base]
+- p: [21, 22]
+  k: '['
+  l: [Base]
+- p: [22, 23]
+  k: (
+  l: [Base]
+- p: [26, 27]
+  k: )
+  l: [Base]
+- p: [27, 28]
+  k: ']'
+  l: [Base]
