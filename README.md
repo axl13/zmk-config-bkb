@@ -39,6 +39,12 @@ mods: for Cmd+Opt shortcuts use the thumb Cmd with F or J instead.
 
 `€` is Function + D and assumes the macOS US layout (Option+Shift+2).
 
+Space on the Base layer is `&sentence_space` from
+[zmk-sentence-case](https://github.com/rafaelromao/zmk-sentence-case): after
+`.`, `!` or `?` the next letter is capitalised automatically (within 2 s of the
+punctuation and 1 s of the space). Space on the other layers is a plain space.
+The module is pinned by commit in `config/west.yml`.
+
 Regenerate the diagram with [keymap-drawer](https://github.com/caksoylar/keymap-drawer):
 
 ```sh

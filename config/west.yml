@@ -6,10 +6,15 @@ manifest:
       url-base: https://github.com/nickconway
     - name: split-encoder
       url-base: https://github.com/petejohanson
+    - name: rafaelromao
+      url-base: https://github.com/rafaelromao
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-sentence-case
+      remote: rafaelromao
+      revision: f9700973b37f2f5d414afc92fb165ad02b0f29b6
   self:
     path: config

@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <behaviors/sentence_case.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
@@ -32,6 +33,12 @@
 &lt {
     flavor = "balanced";
     quick-tap-ms = <175>;
+};
+
+// Auto-capitalise the first letter after ". " "! " "? " (zmk-sentence-case module)
+&sentence_space {
+    prior-idle-ms = <2000>;
+    release-after-ms = <1000>;
 };
 
 / {
@@ -73,7 +80,7 @@
 &kp Q              &kp W         &kp E          &kp R         &kp T           &kp Y      &kp U        &kp I        &kp O         &kp P
 &bhm LEFT_SHIFT A  &bhm LCTRL S  &bhm LGUI D    &bhm LALT F   &kp G           &kp H      &bhm RALT J  &bhm RGUI K  &bhm RCTRL L  &bhm RIGHT_SHIFT SEMICOLON
 &kp Z              &kp X         &kp C          &kp V         &kp B           &kp N      &kp M        &kp COMMA    &kp PERIOD    &kp SLASH
-                                 &kp BACKSPACE  &kp LEFT_GUI  &lt 1 ESCAPE    &lt 1 TAB  &lt 2 ENTER  &kp SPACE
+                                 &kp BACKSPACE  &kp LEFT_GUI  &lt 1 ESCAPE    &lt 1 TAB  &lt 2 ENTER  &sentence_space
             >;
         };
 

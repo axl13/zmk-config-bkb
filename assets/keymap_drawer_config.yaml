@@ -8,6 +8,7 @@ parse_config:
     '&bt BT_NXT': BT next
     '&bt BT_PRV': BT prev
     '&ext_power EP_TOG': Ext pwr
+    '&sentence_space': Space
     '&soft_off': Soft off
     '&studio_unlock': Studio unlock
   zmk_keycode_map:
