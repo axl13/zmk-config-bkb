@@ -26,16 +26,23 @@ mirrored two-finger combos.
 | tap | Bspc · Cmd · Esc | Tab · Enter · Space |
 | hold | – · – · Symbols | Symbols · Function · – |
 
-Combos (same row, adjacent fingers, Base layer only, 40 ms). As on a Kinesis,
-Shift is always held on the **opposite** hand:
+Combos (same row, adjacent fingers, Base layer only, 40 ms), placed where the
+Kinesis Advantage has the key. As on a Kinesis, Shift is always held on the
+**opposite** hand:
 
-| Combo | Output | + opposite Shift |
-|---|---|---|
-| `L+;` | `'` | hold `A` → `"` |
-| `O+P` | `\` | hold `A` → `\|` |
-| `,+.` | `[` | hold `A` → `{` |
-| `.+/` | `]` | hold `A` → `}` |
-| `Q+W` | `` ` `` | hold `;` → `~` |
+| Combo | Output | + opposite Shift | Kinesis position |
+|---|---|---|---|
+| `Q+W` | `=` | hold `;` → `+` | top-left corner |
+| `Z+X` | `` ` `` | hold `;` → `~` | bottom-left corner |
+| `O+P` | `\` | hold `A` → `\|` | right of P |
+| `L+;` | `'` | hold `A` → `"` | right of `;` |
+| `,+.` | `[` | hold `A` → `{` | bottom-right row |
+| `.+/` | `]` | hold `A` → `}` | bottom-right row |
+
+Home-row mods are positional: a mod key only becomes Shift/Ctrl/Cmd/Alt when
+the next key is on the other hand or a thumb (`hold-trigger-key-positions`).
+Same-hand rolls always type letters. For a same-hand shortcut, hold the mod
+past 200 ms first.
 
 `O+P` and `.+/` have a 150 ms prior-idle guard because `op` (stop, open) and
 `./` (relative paths) are typed mid-word; they only fire after a short pause.

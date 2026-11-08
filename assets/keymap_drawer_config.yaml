@@ -1,5 +1,6 @@
 draw_config:
-  footer_text: "Skeletyl v3.3 · small label = hold · blue = combo"
+  footer_text: Skeletyl v3.4 · small label = hold · blue = combo · Shift on opposite
+    hand
   glyph_tap_size: 14
   n_columns: 1
 parse_config:
@@ -54,6 +55,7 @@ parse_config:
     LEFT_SHIFT: Shift
     LGUI: Cmd
     LPAR: (
+    LSHFT: Shift
     MINUS: '-'
     PERIOD: .
     PG_DN: PgDn
@@ -67,6 +69,8 @@ parse_config:
     RIGHT: →
     RIGHT_SHIFT: Shift
     RPAR: )
+    RSHFT: Shift
+    SEMI: ;
     SEMICOLON: ;
     SLASH: /
     SPACE: Space

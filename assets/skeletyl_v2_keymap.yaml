@@ -112,14 +112,17 @@ layers:
   - {type: held}
   - Space
 combos:
-- p: [18, 19]
-  k: ''''
+- p: [0, 1]
+  k: '='
+  l: [Base]
+- p: [20, 21]
+  k: '`'
   l: [Base]
 - p: [8, 9]
   k: \
   l: [Base]
-- p: [0, 1]
-  k: '`'
+- p: [18, 19]
+  k: ''''
   l: [Base]
 - p: [27, 28]
   k: '['
