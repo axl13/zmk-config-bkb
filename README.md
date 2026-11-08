@@ -55,13 +55,15 @@ Space on the Base layer is `&sentence_space` from
 punctuation and 1 s of the space). Space on the other layers is a plain space.
 The module is pinned by commit in `config/west.yml`.
 
-Regenerate the diagram with [keymap-drawer](https://github.com/caksoylar/keymap-drawer):
+Printable one-page version: [assets/skeletyl_v2_keymap.pdf](./assets/skeletyl_v2_keymap.pdf) (A4).
+
+Regenerate all diagrams (SVG, PNG, printable PDF) after any keymap change:
 
 ```sh
-keymap -c assets/keymap_drawer_config.yaml parse -z config/skeletyl_v2.keymap -o assets/skeletyl_v2_keymap.yaml
-# set layout: {qmk_keyboard: bastardkb/skeletyl, layout_name: LAYOUT_split_3x5_3}
-keymap -c assets/keymap_drawer_config.yaml draw assets/skeletyl_v2_keymap.yaml -o assets/skeletyl_v2_keymap.svg
+scripts/draw_keymap.sh
 ```
+
+Agents working in this repo must do this on every layout change; see [AGENTS.md](./AGENTS.md).
 
 ### ZMK Studio
 
