@@ -28,14 +28,16 @@ mirrored two-finger combos.
 
 Combos (same row, adjacent fingers, Base layer only, 40 ms):
 
-| Left hand | Right hand |
-|---|---|
-| `S+D` → `{` | `J+K` → `"` · `K+L` → `}` · `L+;` → `'` |
-| `Z+X` → `\` · `X+C` → `[` · `C+V` → `(` | `M+,` → `)` · `,+.` → `]` |
+| Combo | Output | With Shift (hold A) |
+|---|---|---|
+| `L+;` | `'` | `"` |
+| `O+P` | `"` | `"` |
+| `Q+W` | `` ` `` | `~` |
+| `,+.` | `[` | `{` |
+| `.+/` | `]` | `}` |
 
-`{` and `}` have a 150 ms prior-idle guard because `sd`/`kl` occur in words.
-`S+D`, `J+K`, `K+L` double as Ctrl+Cmd / Alt+Cmd chords under the home-row
-mods: for Cmd+Opt shortcuts use the thumb Cmd with F or J instead.
+`O+P` and `.+/` have a 150 ms prior-idle guard because `op` (stop, open) and
+`./` (relative paths) are typed mid-word; they only fire after a short pause.
 
 `€` is Function + D and assumes the macOS US layout (Option+Shift+2).
 

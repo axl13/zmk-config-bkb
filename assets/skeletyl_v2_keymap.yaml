@@ -112,30 +112,18 @@ layers:
   - {type: held}
   - Space
 combos:
-- p: [11, 12]
-  k: '{'
-  l: [Base]
-- p: [16, 17]
-  k: '"'
-  l: [Base]
-- p: [17, 18]
-  k: '}'
-  l: [Base]
 - p: [18, 19]
   k: ''''
   l: [Base]
-- p: [20, 21]
-  k: \
+- p: [8, 9]
+  k: '"'
   l: [Base]
-- p: [21, 22]
-  k: '['
-  l: [Base]
-- p: [22, 23]
-  k: (
-  l: [Base]
-- p: [26, 27]
-  k: )
+- p: [0, 1]
+  k: '`'
   l: [Base]
 - p: [27, 28]
+  k: '['
+  l: [Base]
+- p: [28, 29]
   k: ']'
   l: [Base]

@@ -1,5 +1,5 @@
 draw_config:
-  footer_text: Skeletyl v3.2 · small label = hold · blue = combo
+  footer_text: "Skeletyl v3.3 · small label = hold · blue = combo"
   glyph_tap_size: 14
   n_columns: 1
 parse_config:
