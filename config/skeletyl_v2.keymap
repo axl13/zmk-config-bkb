@@ -14,7 +14,7 @@
  * Skeletyl v3.2 — Kinesis Advantage aligned
  *
  * Thumbs:   Bspc  Cmd  Esc/Sym   |   Tab/Sym  Enter/Fn  Space
- * Combos:   Q+W =   Z+X `   O+P \   L+; '   ,+. [   .+/ ]   (opposite-hand Shift: + ~ | " { })
+ * Combos:   Q+W =   Z+X `   I+O -   O+P \   L+; '   ,+. [   .+/ ]   (opposite-hand Shift: + ~ _ | " { })
  *
  * Key positions (for combos):
  *   0  1  2  3  4      5  6  7  8  9
@@ -77,9 +77,11 @@
 
         // Kinesis positions. Shift on the OPPOSITE hand gives the pair:
         //   left  combos + hold ;   Q+W = (+)    Z+X ` (~)
-        //   right combos + hold A   O+P \ (|)    L+; ' (")    ,+. [ ({)    .+/ ] (})
+        //   right combos + hold A   I+O - (_)    O+P \ (|)    L+; ' (")    ,+. [ ({)    .+/ ] (})
         combo_eql  { key-positions = <0 1>;   bindings = <&kp EQUAL>; layers = <0>; timeout-ms = <40>; };
         combo_grv  { key-positions = <20 21>; bindings = <&kp GRAVE>; layers = <0>; timeout-ms = <40>; };
+        // I+O fires only on a near-simultaneous press (25 ms) so rolls through "io" stay letters
+        combo_mins { key-positions = <7 8>;   bindings = <&kp MINUS>; layers = <0>; timeout-ms = <25>; };
         combo_bslh { key-positions = <8 9>;   bindings = <&kp BSLH>;  layers = <0>; timeout-ms = <40>; require-prior-idle-ms = <150>; };
         combo_sqt  { key-positions = <18 19>; bindings = <&kp SQT>;   layers = <0>; timeout-ms = <40>; };
         combo_lbkt { key-positions = <27 28>; bindings = <&kp LBKT>;  layers = <0>; timeout-ms = <40>; };

@@ -34,6 +34,7 @@ Kinesis Advantage has the key. As on a Kinesis, Shift is always held on the
 |---|---|---|---|
 | `Q+W` | `=` | hold `;` → `+` | top-left corner |
 | `Z+X` | `` ` `` | hold `;` → `~` | bottom-left corner |
+| `I+O` | `-` | hold `A` → `_` | top-right row (Kinesis `-` is right of `0`) |
 | `O+P` | `\` | hold `A` → `\|` | right of P |
 | `L+;` | `'` | hold `A` → `"` | right of `;` |
 | `,+.` | `[` | hold `A` → `{` | bottom-right row |
@@ -43,6 +44,8 @@ Home-row mods are positional: a mod key only becomes Shift/Ctrl/Cmd/Alt when
 the next key is on the other hand or a thumb (`hold-trigger-key-positions`).
 Same-hand rolls always type letters. For a same-hand shortcut, hold the mod
 past 200 ms first.
+
+`I+O` uses a 25 ms window instead of 40 ms so fast rolls through `io` (function, action) stay letters; press I and O together deliberately.
 
 `O+P` and `.+/` have a 150 ms prior-idle guard because `op` (stop, open) and
 `./` (relative paths) are typed mid-word; they only fire after a short pause.

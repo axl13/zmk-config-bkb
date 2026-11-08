@@ -1,5 +1,5 @@
 draw_config:
-  footer_text: Skeletyl v3.4 · small label = hold · blue = combo · Shift on opposite
+  footer_text: Skeletyl v3.5 · small label = hold · blue = combo · Shift on opposite
     hand
   glyph_tap_size: 14
   n_columns: 1
