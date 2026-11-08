@@ -26,15 +26,16 @@ mirrored two-finger combos.
 | tap | Bspc · Cmd · Esc | Tab · Enter · Space |
 | hold | – · – · Symbols | Symbols · Function · – |
 
-Combos (same row, adjacent fingers, Base layer only, 40 ms):
+Combos (same row, adjacent fingers, Base layer only, 40 ms). As on a Kinesis,
+Shift is always held on the **opposite** hand:
 
-| Combo | Output | With Shift (hold A) |
+| Combo | Output | + opposite Shift |
 |---|---|---|
-| `L+;` | `'` | `"` |
-| `O+P` | `"` | `"` |
-| `Q+W` | `` ` `` | `~` |
-| `,+.` | `[` | `{` |
-| `.+/` | `]` | `}` |
+| `L+;` | `'` | hold `A` → `"` |
+| `O+P` | `\` | hold `A` → `\|` |
+| `,+.` | `[` | hold `A` → `{` |
+| `.+/` | `]` | hold `A` → `}` |
+| `Q+W` | `` ` `` | hold `;` → `~` |
 
 `O+P` and `.+/` have a 150 ms prior-idle guard because `op` (stop, open) and
 `./` (relative paths) are typed mid-word; they only fire after a short pause.
