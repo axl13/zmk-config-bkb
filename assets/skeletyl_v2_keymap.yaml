@@ -115,6 +115,13 @@ combos:
 - p: [0, 1]
   k: '='
   l: [Base]
+- p: [10, 11]
+  k: Esc
+  l: [Base]
+- p: [10, 19]
+  k: {t: ':', h: Caps word}
+  l: [Base]
+  draw_separate: true
 - p: [20, 21]
   k: '`'
   l: [Base]

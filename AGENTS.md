@@ -29,6 +29,30 @@ you **must**, in the same commit:
 
 Never hand-edit the files in `assets/skeletyl_v2_keymap.*`; always regenerate.
 
+## Rule: always keep the ZMK and QMK Skeletyl in sync
+
+The owner types on two Skeletyls: this wireless ZMK one and a hand-wired QMK
+one (<https://github.com/axl13/qmk_firmware>, `keyboards/axl13/my_skeletyl`).
+Any change to layers, combos, tap-hold behaviour or timing made in one repo
+**must** be made in the other in the same piece of work, with both diagrams
+regenerated. Don't report a layout change as done until both repos have it.
+
+| Feature | QMK (`keymaps/default/keymap.c`, `config.h`) | ZMK (`config/skeletyl_v2.keymap`) |
+|---|---|---|
+| Positional home-row mods | `CHORDAL_HOLD` + `PERMISSIVE_HOLD`, `TAPPING_TERM 200` | `bhm_*` / `bhs_*`: `balanced`, `hold-trigger-key-positions`, 200 ms |
+| Typing window (mod pressed right after a key = tap) | `FLOW_TAP_TERM 150`; 80 for Shift in `get_flow_tap_term()` | `require-prior-idle-ms` 150 on `bhm_*`, 80 on `bhs_*` |
+| Caps Word, hold `A` + `;` | `BOTH_SHIFTS_TURNS_ON_CAPS_WORD` | `combo_caps` + `cw_ht` |
+| Combo windows | `COMBO_TERM 40`; 25 for `I+O`, `A+S`; `COMBO_PRIOR_IDLE_MS 150` for `O+P`, `.+/` | `timeout-ms`, `require-prior-idle-ms` per combo |
+| Layer-tap thumbs | `get_quick_tap_term()` 175 | `&lt` `quick-tap-ms` 175 |
+| Sentence case | `getreuer/sentence_case` module | `zmk-sentence-case` module |
+
+Intentional differences (do not "fix" them):
+
+- Function-layer hardware keys. ZMK: Bluetooth, Studio unlock, ext power, soft
+  off. QMK: autocorrect toggle (Fn+;), OS mode (Fn+Z), sentence-case toggle
+  (Fn+G).
+- QMK only: Autocorrect, OS detection with the Ctrl/Cmd swap, the OLED.
+
 ## Design rules for this keymap (keep them when editing)
 
 - **Kinesis muscle memory first.** Every symbol sits on the same finger and
@@ -43,7 +67,8 @@ Never hand-edit the files in `assets/skeletyl_v2_keymap.*`; always regenerate.
 - **Layers live on thumbs, never on letters.** Symbols = hold Esc or Tab,
   Function = hold Enter.
 - **Combos:** two adjacent keys on the same row only. No vertical combos, no
-  thumb+thumb on the same hand. Check the pair isn't a common bigram; if it
+  thumb+thumb on the same hand. One exception, by owner decision: `A` + `;`
+  held = Caps Word, mirroring the QMK both-Shifts gesture. Check the pair isn't a common bigram; if it
   is (e.g. `op`, `./`), add `require-prior-idle-ms = <150>`.
 - Shifted number symbols sit directly above their digits on the Symbols layer.
 

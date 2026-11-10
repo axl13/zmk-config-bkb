@@ -12,7 +12,7 @@ The base layer is [Aptmak](https://github.com/Apsu/aptmak), with V, Q, and Z, on
 ### [30 key (23332+2)](./assets/split30_keymap.yaml)
 ![30 key layout (generated with Caksoylar's keymap-drawer)](./assets/split30_keymap.svg)
 
-## Skeletyl (v3.2, Kinesis Advantage aligned)
+## Skeletyl (v3.6, Kinesis Advantage aligned)
 
 ![Skeletyl keymap](./assets/skeletyl_v2_keymap.svg)
 
@@ -33,7 +33,9 @@ Kinesis Advantage has the key. As on a Kinesis, Shift is always held on the
 | Combo | Output | + opposite Shift | Kinesis position |
 |---|---|---|---|
 | `Q+W` | `=` | hold `;` → `+` | top-left corner |
+| `A+S` | `Esc` | – | not a Kinesis position; a second Esc on the home row |
 | `Z+X` | `` ` `` | hold `;` → `~` | bottom-left corner |
+| `A+;` held | Caps Word | – | both home-row Shift keys; press together after a short pause and hold ~0.2 s |
 | `I+O` | `-` | hold `A` → `_` | top-right row (Kinesis `-` is right of `0`) |
 | `O+P` | `\` | hold `A` → `\|` | right of P |
 | `L+;` | `'` | hold `A` → `"` | right of `;` |
@@ -45,7 +47,19 @@ the next key is on the other hand or a thumb (`hold-trigger-key-positions`).
 Same-hand rolls always type letters. For a same-hand shortcut, hold the mod
 past 200 ms first.
 
-`I+O` uses a 25 ms window instead of 40 ms so fast rolls through `io` (function, action) stay letters; press I and O together deliberately.
+While typing, a home-row mod pressed within 150 ms of the previous key is
+always a tap (`require-prior-idle-ms`, the counterpart of QMK Flow Tap), so
+letters appear at once. The two Shift keys (`A`, `;`) use 80 ms so a capital
+right after a word still works.
+
+Caps Word: press `A` and `;` together and hold them for about 0.2 s. A quick
+tap of the pair types `:`, the same as Shift + `;`.
+
+This keymap is kept in sync with the hand-wired QMK Skeletyl in
+[axl13/qmk_firmware](https://github.com/axl13/qmk_firmware/tree/master/keyboards/axl13/my_skeletyl);
+see [AGENTS.md](./AGENTS.md) for the list of equivalents.
+
+`I+O` and `A+S` use a 25 ms window instead of 40 ms so fast rolls through `io` (function, action) and `as` (was, last) stay letters; press the two keys together deliberately.
 
 `O+P` and `.+/` have a 150 ms prior-idle guard because `op` (stop, open) and
 `./` (relative paths) are typed mid-word; they only fire after a short pause.

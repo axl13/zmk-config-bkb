@@ -1,11 +1,15 @@
 draw_config:
-  footer_text: Skeletyl v3.5 · small label = hold · blue = combo · Shift on opposite
+  footer_text: Skeletyl v3.6 · small label = hold · blue = combo · Shift on opposite
     hand
   glyph_tap_size: 14
   n_columns: 1
 parse_config:
+  zmk_combos:
+    combo_caps:
+      draw_separate: true
   raw_binding_map:
     '&bt BT_CLR': BT clear
+    '&cw_ht 0 COLON': {t: ':', h: Caps word}
     '&bt BT_NXT': BT next
     '&bt BT_PRV': BT prev
     '&ext_power EP_TOG': Ext pwr
