@@ -47,10 +47,10 @@ the next key is on the other hand or a thumb (`hold-trigger-key-positions`).
 Same-hand rolls always type letters. For a same-hand shortcut, hold the mod
 past 200 ms first.
 
-While typing, a home-row mod pressed within 150 ms of the previous key is
-always a tap (`require-prior-idle-ms`, the counterpart of QMK Flow Tap), so
-letters appear at once. The two Shift keys (`A`, `;`) use 80 ms so a capital
-right after a word still works.
+While typing, a Ctrl/Cmd/Alt home-row mod pressed within 150 ms of the
+previous key is always a tap (`require-prior-idle-ms`, the counterpart of QMK
+Flow Tap), so those letters appear at once. The two Shift keys (`A`, `;`) have
+no such window, so a capital right after a space always works.
 
 Caps Word: press `A` and `;` together and hold them for about 0.2 s. A quick
 tap of the pair types `:`, the same as Shift + `;`.
